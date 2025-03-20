@@ -39,7 +39,7 @@ def query_rag(query_text):
     prompt = prompt_template.format(context=context_text, question=query_text)
     print(prompt)
 
-    model = Ollama(model="phi")
+    model = Ollama(model="llama3.2")
     response_text = model.invoke(prompt)
 
     sources = [doc.metadata.get("id", None) for doc, _score in results]
