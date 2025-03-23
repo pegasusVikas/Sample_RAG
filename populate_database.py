@@ -6,6 +6,8 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.schema import Document
 from get_embedding import get_embedding
 from langchain_community.vectorstores.chroma import Chroma
+import warnings
+warnings.filterwarnings("ignore")
 
 CHROMA_PATH = "chromaDB"
 DATA_PATH = "data"
@@ -14,7 +16,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--reset",action="store_true",help="Reset the database")
     args = parser.parse_args()
-    print("HI")
+    #print("HI")
     if args.reset:
         print("Clearing Chroma DB")
         clear_database()

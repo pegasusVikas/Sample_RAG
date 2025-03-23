@@ -2,6 +2,8 @@ import argparse
 from langchain_community.vectorstores.chroma import Chroma
 from langchain.prompts import ChatPromptTemplate
 from langchain_community.llms.ollama import Ollama
+import warnings
+warnings.filterwarnings("ignore")
 
 from get_embedding import get_embedding
 
